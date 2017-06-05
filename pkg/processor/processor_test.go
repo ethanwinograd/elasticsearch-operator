@@ -24,7 +24,9 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 
 package processor
 
-import "testing"
+import {
+				"testing"
+				mock_k8sutil "github.com/upmc-enterprises/elasticsearch-operator/util/mock_k8sutil.go"
 
 func TestBaseImage(t *testing.T) {
 	expectedImage := "foo/image"
@@ -109,5 +111,9 @@ func TestNoZonesPassed(t *testing.T) {
 
 	if len(zoneDistribution) != 1 {
 		t.Error("Expected 1 zone, got ", len(zoneDistribution))
+	}
+
+	func TestCreateClientService(t *testing.T){
+
 	}
 }
